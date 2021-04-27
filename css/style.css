@@ -1,0 +1,314 @@
+@import url(https://fonts.googleapis.com/css?family=Ropa+Sans:regular,italic);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ropa Sans', sans-serif;
+    color: #777777;
+
+}
+
+/*ADICIONANDO O DARK MODE*/
+.dark-mode,
+.dark-mode header{
+    background-color: #3e3e3e;
+    color: #fff;
+}
+
+.dark-mode section.projects article {
+    background-color: #949494;
+}
+
+/* CRIANDO BOTÃO PARA O DARKMODE*/
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+    justify-content: space-between;
+    justify-items: right;
+    align-items: flex-start;
+
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white; 
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #777777;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #777777;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+.container {
+    width: 1200px;
+    max-width: 100%; /*influencia na responsividade*/
+    margin: 0 auto;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25); /*cria uma sombra no header*/
+    margin-bottom: 30px; /*distancia entre o header e a primeira imagem (section banner)*/
+}
+
+header .container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 50px;
+    margin: 10px;
+}
+
+header .logo h2 {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+header .btn-menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: #777777;
+    cursor: pointer; /*a maozinha do clique*/
+}
+
+header .btn-menu button:hover {
+    transition: 0.3s;
+    color: #DC9730;
+}
+
+section.banner .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.banner .slide {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+}
+
+section.banner .controls {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.projects .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section.projects article {
+    width: 500px;
+    max-width: 100%;
+    margin: 30px 0;
+    background-color: #EEEEEE;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+section.projects article .thumb {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section.projects article .info {
+    padding: 20px;
+}
+
+section.projects article .info .price {
+    font-size: 35px;
+}
+
+section.projects article .info .tag {
+    color: #fff;
+    font-size: 25px;
+    display: inline-block;
+    border-radius: 30px;
+    padding: 3px 10px;
+}
+
+section.projects article .info .tag.tag-green {
+    background-color: #51D275;
+}
+
+section.projects article .info .tag.tag-orange {
+    background-color: #DC9730;
+}
+
+/*section style*/
+section.styles article {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    border-radius: 10px;
+}
+section.styles {
+    font-family: Ropa Sans;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center; 
+}
+
+section.styles .img1 {
+    padding: 5px;
+}
+
+
+
+section.styles article .img{
+    position: absolute;
+    width: 608px;
+    height: 80px;
+    background: rgba(196, 196, 196, 0.5);
+}
+
+form {
+    width: 300px;
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+form input,
+form textarea {
+    width: 300px;
+    max-width: 100%;
+    margin: 10px auto;
+    text-align: center;
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+    background-color: #DC9730;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-family: 'Ropa Sans', sans-serif;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal .modal-content {
+    background-color: #fff;
+    width: 500px;
+    padding: 20px;    
+}
+
+.modal .modal-content .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.modal .modal-content .modal-body{
+    text-align: justify;
+}
+
+.modal .modal-content .modal-header .btnClose {
+    background-color:  rgba(252, 252, 252, 0.521);
+}
+
